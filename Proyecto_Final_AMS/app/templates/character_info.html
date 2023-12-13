@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Información del Personaje</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo de PastaHub">
+        <h1>INFORMACIÓN DEL PERSONAJE</h1>
+    </header>
+
+    <section class="character-info">
+        <!-- Botón de Regresar -->
+        <a href="javascript:history.back()" class="btn-enlace">Regresar</a>
+        <!-- Contenido dependiendo del personaje seleccionado -->
+        {% if character_name == 'Furina' %}
+            <!-- Contenido de la información de Furina -->
+            <h2>Furina</h2>
+            <p class="subtitle">La Bailarina Incansable - Arconte Hydro</p>
+            <p class="description">El foco de atención absoluto del escenario durante los juicios, hasta que la obra termina y el público rompe a aplaudir</p>
+            <p class="quote">"Las mentiras nacen para cubrir otras mentiras, y la justicia aguarda al final de todas ellas. El ignorante se ríe de ello, pues no es más que una farsa... hasta que descubre el origen de todo y se da cuenta de que él fue el primero en mentirse a sí mismo"</p>
+            <img src="{{ url_for('static', filename='images/furinainfo.png') }}" alt="Imagen de Furina">
+        {% elif character_name == 'Nahida' %}
+            <!-- Contenido de la información de Nahida -->
+            <h2>Nahida</h2>
+            <p class="subtitle">La Purificadora de las Plantas - Arconte Dendro</p>
+            <p class="description">Un pajarito enjaulado en el Santuario Surasthana que solo puede contemplar el mundo desde sus sueños</p>
+            <p class="quote">"El enemigo del Dios de la Sabiduría es la sabiduría en sí, y el oasis del conocimiento es un espejismo en el desierto de la ignorancia. En la ciudad de los eruditos se incentiva la necedad, y el Dios de la Sabiduría no se opone a ello"</p>
+            <img src="{{ url_for('static', filename='images/nahidainfo.png') }}" alt="Imagen de Nahida">
+        {% elif character_name == 'Raiden' %}
+            <!-- Contenido de la información de Raiden -->
+            <h2>Shogun Raiden</h2>
+            <p class="subtitle">La Entidad de la Eutimia - Arconte Electro</p>
+            <p class="description">Su Excelencia, la todopoderosa Narukami, quien le prometió al pueblo de Inazuma la inmutable eternidad</p>
+            <p class="quote">"El tiempo templa la voluntad. Sin embargo, ella renunciaría a todo el mundo por sus creencias. Tal vez esa sea la razón por la que ha llegado a donde está hoy..."</p>
+            <img src="{{ url_for('static', filename='images/raideninfo.png') }}" alt="Imagen de Raiden">
+        {% elif character_name == 'Zhongli' %}
+            <!-- Contenido de la información de Zhongli -->
+            <h2>Zhongli</h2>
+            <p class="subtitle">El Vagabundo del Mundo Mortal - Arconte Geo</p>
+            <p class="description">Misterioso asesor de la Funeraria El Camino. Erudito y con información sobre todo tipo de cosas</p>
+            <p class="quote">"Las monedas en esta tierra son sangre. Soy el que garantiza el trabajo duro, la sabiduría y el futuro de la gente. Esta es la confianza que he puesto en ellos. Traiciónala y te mancharás con mi sangre"</p>
+            <img src="{{ url_for('static', filename='images/zhongliinfo.png') }}" alt="Imagen de Zhongli">
+        {% elif character_name == 'Venti' %}
+            <!-- Contenido de la información de Venti -->
+            <h2>Venti</h2>
+            <p class="subtitle">El Bardo Itinerante - Arconte Anemo</p>
+            <p class="description">Uno de los muchos bardos de Mondstadt que deambula libremente por las calles y callejones de la ciudad</p>
+            <p class="quote">"Los vientos cambian de dirección. Algún día soplarán hacia un mejor futuro. Toma mis bendiciones y vive sin preocupaciones a partir de este día"</p>
+            <img src="{{ url_for('static', filename='images/ventiinfo.png') }}" alt="Imagen de Venti">
+        {% endif %}
+
+    </section>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

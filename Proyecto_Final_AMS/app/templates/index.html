@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PastaHub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo de PastaHub">
+        <h1>BIENVENIDO A PASTAHUB</h1>
+        <p class="bienvenido-mensaje">Aquí puedes ver la información de los 5 arcontes actuales del juego Genshin Impact
+            ¡Inicia sesión o regístrate!</p>
+        <div>
+            <a href="{{ url_for('main.register') }}" class="btn-enlace">Registrarse</a>
+            <a href="{{ url_for('main.login') }}" class="btn-enlace">Iniciar sesión</a>
+        </div>
+    </header>
+
+    <section id="catalogo">
+        <!-- Primer grupo de elementos -->
+        <div class="grupo">
+            <div class="item">
+                <img class="producto-img" src="{{ url_for('static', filename='images/furina.png') }}" alt="Furina">
+                <button class="btn-ver-mas" onclick="verMas('Furina')">Ver más</button>
+            </div>
+
+            <div class="item">
+                <img class="producto-img" src="{{ url_for('static', filename='images/nahida.png') }}" alt="Nahida">
+                <button class="btn-ver-mas" onclick="verMas('Nahida')">Ver más</button>
+            </div>
+        </div>
+
+        <!-- Segundo grupo de elementos -->
+        <div class="grupo">
+            <div class="item">
+                <img class="producto-img" src="{{ url_for('static', filename='images/raiden.png') }}" alt="Raiden">
+                <button class="btn-ver-mas" onclick="verMas('Raiden')">Ver más</button>
+            </div>
+
+            <div class="item">
+                <img class="producto-img" src="{{ url_for('static', filename='images/zhongli.png') }}" alt="Zhongli">
+                <button class="btn-ver-mas" onclick="verMas('Zhongli')">Ver más</button>
+            </div>
+        </div>
+
+        <!-- Tercer grupo de elementos -->
+
+        <div class="grupo">
+            <div class="item">
+                <img class="producto-img" src="{{ url_for('static', filename='images/venti.png') }}" alt="Venti">
+                <button class="btn-ver-mas" onclick="verMas('Venti')">Ver más</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botones de registro e inicio de sesión -->
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
