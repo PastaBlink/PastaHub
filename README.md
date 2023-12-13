@@ -13,4 +13,4 @@ Proyecto de Técnicas de Programación. Molina Sánchez Arturo
 ## Ejecutar la Aplicación
 
 1. Asegúrate de tener el entorno virtual activado.
-2. Ejecuta la aplicación: `python app.py` (o el nombre de tu archivo principal).
+2. Ejecuta la aplicación: `python run.py` 
